@@ -1,8 +1,14 @@
 <div class="flex flex-col">
+    
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        
       <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8 pt-20">
-        <div class="overflow-x-auto">
+        <a href="{{route('create')}}">
+        <button  type="button"  style="margin-left: 62%" class=" py-2 px-4 bg-indigo-500 hover:bg-indigo-600 rounded text-white mb-2">Register</button></a>
+        <div class="overflow-x-auto"> 
+            
           <table class="max-w-full  m-auto pt-20">
+            
             <thead class="border-b bg-gray-800 text-white">
               <tr>
                 <th scope="col" class="text-sm font-medium px-6 py-4 text-left">
