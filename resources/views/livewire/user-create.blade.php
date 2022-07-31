@@ -29,9 +29,9 @@
 
 
    
-        <div class="mb-4">
+        <div class="mb-6">
             <input type="text" wire:model.debounce.500ms="address"
-                   class="w-full border @error('address') border-red-500 @enderror" placeholder="Address">
+                   class="w-full border @error('address') border-red-500 @enderror" placeholder="Address" size="100" >
             @error('address') <span class="text-red-500">{{ $message }}</span> @enderror
         </div>
    

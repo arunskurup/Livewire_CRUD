@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/Create',\App\Http\Livewire\UserCreate::class);
+Route::get('/List',\App\Http\Livewire\UserList::class);

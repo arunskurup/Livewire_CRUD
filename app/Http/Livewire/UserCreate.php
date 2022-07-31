@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-
+use App\Models\UserDetails;
 class UserCreate extends Component
 {   
     public string $email = '';
@@ -15,7 +15,7 @@ class UserCreate extends Component
         'name' => ['required', 'min:2'],
         'address' => ['required', 'min:2'],
         'email' => ['required', 'email'],
-        'phone' => ['required', 'min:10'],
+        'phone' => ['required', 'regex:/^([0-9\s\-\+\(\)]*)$/','min:10'],
         
     ]; 
 
@@ -28,7 +28,13 @@ class UserCreate extends Component
         $this->validate();
 
         // Register customer
-        session()->flash('message', 'Customer was created.');
+        session()->flash('message', 'User was created.');
+        $create = new UserDetails;
+        $create->name =  $this->name;
+        $create->email = $this->email;
+        $create->phone = $this->phone;
+        $create->address = $this->address;
+        $create->save();
 
         $this->email = '';
         $this->phone = '';
