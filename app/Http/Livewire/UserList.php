@@ -27,5 +27,8 @@ class UserList extends Component
         }
         $this->getdata();
     }
+    public function updateUser($id)
+    {
 
+    }
 }

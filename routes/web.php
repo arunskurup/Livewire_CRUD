@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Update/{id}',\App\Http\Livewire\UserUpdate::class)->name('update');
 Route::get('/Create',\App\Http\Livewire\UserCreate::class)->name('create');
-Route::get('/List',\App\Http\Livewire\UserList::class);
+Route::get('/List',\App\Http\Livewire\UserList::class)->name('list');
